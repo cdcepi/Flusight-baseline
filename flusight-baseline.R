@@ -601,8 +601,7 @@ quantile_ed_preds_formatted <- preds %>%
   dplyr::select(
     reference_date, horizon, target, target_end_date, location,
     output_type, output_type_id, value
-  )%>% ##add this for Iowa until data is released
-  filter(as.character(location) != "19")
+  )
 
 
 fil <- quantile_ed_preds_formatted %>% filter(horizon==-1, location=="US")
